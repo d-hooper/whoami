@@ -56,12 +56,12 @@
       </div>
       <div class="col-md-6">
         <a href="http://projectu.dallinhooper.com" target="_blank" rel="noopener noreferrer">
-          <div class="project-card mt-3 position-relative">
+          <div tabindex="0" class="project-card mt-3 position-relative">
             <img src="https://images.unsplash.com/photo-1658426837321-9e04e1d227ee?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                  class="project-img"
                  alt="a keyboard, mouse, stylus, and bowlof fruit resting on a chalkboard surface with math equations written on it">
             <div class="bg-light position-absolute description">
-              <h3>ProjectU</h3>
+              <h3 class="fw-bold">ProjectU</h3>
               <p class="mb-0">
                 ProjectU is a calorie tracking application allowing users to query a third-party API (Spoonacular) for
                 nutritional info and save meals and items eaten.
@@ -72,11 +72,11 @@
       </div>
       <div class="col-md-6">
         <a href="http://keepr.dallinhooper.com" target="_blank" rel="noopener noreferrer">
-          <div class="project-card mt-3 position-relative">
+          <div tabindex="0" class="project-card mt-3 position-relative">
             <img src="https://images.unsplash.com/photo-1634224152857-69c415153d4a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                  class="project-img" alt="a person using a key to open a safety deposit box">
             <div class="bg-light position-absolute description">
-              <h3>Keepr</h3>
+              <h3 class="fw-bold">Keepr</h3>
               <p class="mb-0">
                 Keepr is a social platform for posting 'Keeps' or captioned images and grouping desired images in public
                 or private vaults. It features logic comparable to Pinterest.
@@ -87,11 +87,11 @@
       </div>
       <div class="col-md-6">
         <a href="http://tower.dallinhooper.com" target="_blank" rel="noopener noreferrer">
-          <div class="project-card mt-3 position-relative">
+          <div tabindex="0" class="project-card mt-3 position-relative">
             <img src="https://images.unsplash.com/photo-1464207687429-7505649dae38?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                  class="project-img " alt="a group of people sharing a picnic on a hilltop watching the sunset">
             <div class="bg-light position-absolute description">
-              <h3>Tower</h3>
+              <h3 class="fw-bold">Tower</h3>
               <p class="mb-0">
                 Tower is a site for finding and planning events. Logged in users can set a date and capacity for events,
                 see who is attending an event, and even cancel events they are hosting.
@@ -102,12 +102,12 @@
       </div>
       <div class="col-md-6">
         <a href="http://allspice.dallinhooper.com" target="_blank" rel="noopener noreferrer">
-          <div class="project-card mt-3 position-relative">
+          <div tabindex="0" class="project-card mt-3 position-relative">
             <img src="https://images.unsplash.com/photo-1589152144820-692b189e0b34?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                  class="project-img"
                  alt="a recipe book open to a section describing ingredients and steps for making break">
             <div class="bg-light position-absolute description">
-              <h3>All-Spice</h3>
+              <h3 class="fw-bold">All-Spice</h3>
               <p class="mb-0">
                 All-Spice is a digital recipe book where logged-in users can create their own recipes, as well as view
                 and save recipes created by others.
@@ -126,18 +126,12 @@ h2 {
   text-transform: uppercase;
 }
 
-.about:hover .profile {
-  // opacity: 100;
-}
 
 .profile {
   width: 100%;
   object-fit: cover;
   object-position: center;
-  // opacity: 0;
-  // transition: opacity 0.75s ease-in-out;
 }
-
 
 .project-card {
   width: 100%;
@@ -154,11 +148,28 @@ h2 {
   opacity: 100;
 }
 
+.project-card:focus .description,
+.description:focus .description {
+  opacity: 100;
+}
+
 .description {
   bottom: 0;
-  max-height: 50%;
+  max-height: 60%;
   padding: 0.5rem;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
+  font-size: 1.125rem;
+  overflow: auto;
+}
+
+@media screen and (max-width: 576px) {
+  .project-card:hover .description {
+    opacity: 0;
+  }
+
+  .description {
+    opacity: 100;
+  }
 }
 </style>
