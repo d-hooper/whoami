@@ -31,7 +31,7 @@ jobs:
           node-version: 22 
 
       - name: Install dependencies 📦
-        working-directory: ./
+        working-directory: ./whoami
         run: npm ci  # Clean install of the project's dependencies.
 
       # Build the VUE application
