@@ -32,7 +32,7 @@ jobs:
 
       - name: Install dependencies 📦
         working-directory: ./
-        run: npm install  # Clean install of the project's dependencies.
+        run: npm ci  # Clean install of the project's dependencies.
 
       # Build the VUE application
       - name: Build the app 🏗️
