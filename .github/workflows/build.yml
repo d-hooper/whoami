@@ -43,11 +43,11 @@ jobs:
       - name: Setup Pages 📃
         uses: actions/configure-pages@v4  
 
-      # Uploads the build output for deployment to GitHub Pages.
+      # Uploads the\ld output for deployment to GitHub Pages.
       - name: Upload artifact ⬆️
         uses: actions/upload-pages-artifact@v3  
         with:
-          path: './'  # Path to the built app's static files, this can be configured in the `vite.config` file with 'outputDir'
+          path: './dist'  # Path to the built app's static files, this can be configured in the `vite.config` file with 'outputDir'
 
       # Deploy the application to GitHub Pages using the 'deploy-pages' pre-build action.
       - name: Deploy to GitHub Pages ✨
